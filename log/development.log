@@ -1,0 +1,12 @@
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/application.rb:246)
+Started GET "/" for ::1 at 2017-05-08 16:37:47 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ebolaa/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (28.2ms)
+Completed 200 OK in 248ms (Views: 139.7ms | ActiveRecord: 0.0ms)
+
+
