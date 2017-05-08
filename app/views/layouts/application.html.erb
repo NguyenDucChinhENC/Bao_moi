@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BaoMoi</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application", media: "all",
+  "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application",
+  "data-turbolinks-track": "reload" %>
+  <%= render "layouts/shim" %>
+</head>
+<body>
+  <%= render "layouts/header" %>
+  <%= yield %>
+  <%= render "layouts/footer" %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <script>
+    $.vegas("slideshow", {
+      delay:5000,
+      backgrounds:[
+      { src:"assets/nature1.jpg", fade:2000 },
+      { src:"assets/bw1.jpg", fade:2000 },
+      { src:"assets/portrait1.jpg", fade:2000 },
+      { src:"assets/portrait5.jpg", fade:2000 },
+      { src:"assets/portrait2.jpg", fade:2000 },
+      { src:"assets/portrait3.jpg", fade:2000 },
+      { src:"assets/portrait4.jpg", fade:2000 },
+      { src:"assets/forest.jpg", fade:2000 }
+      ]
+    })("overlay", {
+      src:"assets/overlay.png"
+    });
 
-  <body>
-    <%= yield %>
-  </body>
+  </script>
+  <!-- /Slideshow Background -->
+
+  <!-- Mixitup : Grid -->
+  <script>
+    $(function(){
+      $("#Grid").mixitup();
+    });
+  </script>
+  <!-- /Mixitup : Grid -->
+
+  <!-- Custom JavaScript for Smooth Scrolling - Put in a custom JavaScript file to clean this up -->
+  <script>
+    $(function() {
+      $("a[href*=#]:not([href=#])").click(function() {
+        if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"")
+          || location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
+        if (target.length) {
+          $("html,body").animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+    });
+  </script>
+  <!-- Navbar -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#nav").scrollToFixed();
+    });
+  </script>
+</body>
 </html>

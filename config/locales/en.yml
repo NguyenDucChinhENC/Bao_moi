@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  static_pages:
+    home:
+      home_title: "Home"
+  layouts:
+    header:
+      title_welcome: "BOOKMOI.COM"
+      title_login: "Login"
