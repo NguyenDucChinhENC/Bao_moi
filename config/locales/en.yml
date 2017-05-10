@@ -20,4 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-
+  title: "BookMoi"
+  static_pages:
+    home:
+      title: "Home"
+    about:
+      title: "About"
+    help:
+      title: "Help"
