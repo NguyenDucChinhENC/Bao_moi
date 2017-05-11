@@ -1,9 +1,9 @@
 .scrollToTop, .pagination_area ul li a:hover{background-color:#ffa500; color:#fff}
 .scrollToTop:hover, .scrollToTop:focus, .pagination_area ul li a{background-color:#fff; color:#ffa500; border-color:1px solid #ffa500}
-.top_nav li a:hover{color:#FFA500}
+.top-nav li a:hover{color:#FFA500}
 .search_form input[type="submit"]:hover{background-color:#FFA500}
 .navbar-default{background-color:#ffa500; border-color:#ffa500}
-.custom_nav li a:hover{border-color:#FFAE00}
+.custom-nav li a:hover{border-color:#FFAE00}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{background-color:#fff; color:#ffa500; border-color:#FFAE00}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{background-color:#fff; color:#ffa500; border-color:#FFAE00}
 .navbar-nav > li > .dropdown-menu{margin-top:1px; background-color:#ffa500}
@@ -26,7 +26,7 @@ span.meta_date:hover, span.meta_comment:hover, span.meta_more:hover, span.meta_c
 .nav-tabs > li.active > a:hover{color:#ffa500 !important}
 .nav-tabs > li > a:hover{background-color:#ffa500; color:#fff !important}
 .single_bottom_rightbar ul li > a:hover{color:#FFA500}
-.labels_nav li a:hover{background-color:#FFA500}
+.labels-nav li a:hover{background-color:#FFA500}
 .breadcrumb{background-color:#ffa500; border:2px solid #ffa500}
 .single_page_area > h2{border-left:5px solid #ffa500}
 .post_commentbox a:hover, .post_commentbox span:hover{color:#ffa500}
@@ -46,5 +46,5 @@ span.meta_date:hover, span.meta_comment:hover, span.meta_more:hover, span.meta_c
 .contact_form input[type="submit"]:hover{background-color:#ffa500; color:#fff; border-color:#ffa500}
 .our_office:before{border-bottom:1px solid #ffa500}
 .contact_us:before{border-bottom:1px solid #ffa500}
-.single_footer_top > h2{color:#ffa500}
+.single-footer-top > h2{color:#ffa500}
 .similar_post h2 i{color:#ffa500}

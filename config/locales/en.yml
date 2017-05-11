@@ -28,3 +28,27 @@ en:
       title: "About"
     help:
       title: "Help"
+  layouts:
+    header:
+      home_title: "Home"
+      about_title: "About"
+      contact_title: "Contact"
+      error_page_title: "error page"
+      search_title: "Text to search"
+      archives: "Archives"
+      archives1: "Archives 1"
+      single_page: "Single page"
+      error_title: "404 page"
+      name_title_1: "book"
+      name_title_2: "Moi.com"
+      intro: "Web sách hàng đầu Việt Nam"
+    footer:
+      flicker: "Flicker Images"
+      labels: "Labels"
+      about_us: "About us"
+      about_text: "Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Sed nec laoreet orci, eget ullamcorper quam. Phasellus lorem neque, "
+      label: "Label"
+      copyright: "Copyright 2017 "
+      bookmoi: "BookMoi.Com"
+      developed: "Developed by Nguyen Chinh"
