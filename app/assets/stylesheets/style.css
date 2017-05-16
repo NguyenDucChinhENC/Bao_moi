@@ -9,7 +9,7 @@ License: GPL
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@font-face{ font-family:'Oswald'; font-style:normal; font-weight:400; src:local('Oswald Regular'),local('Oswald-Regular'),url("../fonts/Oswald-Regular-400.woff") format('woff')}
+@font-face{ font-family:'Oswald'; font-style:normal; font-weight:400; src:local('Oswald Regular'),local('Oswald-Regular'),url("../fonts/Oswald-Regular.tff") format('tff')}
 body{background-color:#fff; color:#333; overflow-x:hidden !important}
 ul{padding:0; margin:0; list-style:none}
 a{text-decoration:none; color:#798992}
@@ -31,12 +31,16 @@ img:hover{opacity:0.75}
 .transition{-webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 #header{float:left; display:inline; width:100%}
 .header-top{ display:inline; float:left; width:100%;  border-bottom:1px solid #e6e6e6}
-.header-top-left{ float:left; display:inline; width:70%}
+.header-top-left{ float:left; display:inline; width:60%}
 .top-nav{ text-align:left}
 .top-nav li{ display:inline-block}
 .top-nav li a{ color:#798992; display:inline-block; font-family:"Oswald",sans-serif; font-size:12px; padding:8px 12px; text-transform:uppercase; -webkit-transition:all 0.5; -o-transition:all 0.5; transition:all 0.5}
 .top-nav li a:hover{ color:#FFA500; text-decoration:none; outline:none}
-.header-top-right{ float:right; display:inline; width:30%; text-align:right}
+.top-nav1{ text-align:right}
+.top-nav1 li{ display:inline-block}
+.top-nav1 li a{ color:#798992; display:inline-block; font-family:"Oswald",sans-serif; font-size:12px; padding:8px 12px; text-transform:uppercase; -webkit-transition:all 0.5; -o-transition:all 0.5; transition:all 0.5}
+.top-nav1 li a:hover{ color:#FFA500; text-decoration:none; outline:none}
+.header-top-right{ float:right; display:inline; width:40%; text-align:right}
 .search_form{ padding:3px 0 0}
 .search_form input[type="text"]{ background:none repeat scroll 0 0 #fff; border:medium none; color:#afafaf; display:inline-block; line-height:27px; margin:0; max-height:31px; padding:0 0 0 15px; width:180px}
 .search_form input[type="submit"]{ background:url("images/icon-search.png") no-repeat scroll center 5px rgba(0,0,0,0); height:27px; line-height:27px; width:30px; border:none}
