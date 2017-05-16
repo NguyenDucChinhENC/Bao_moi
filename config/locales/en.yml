@@ -43,6 +43,13 @@ en:
       name_title_1: "book"
       name_title_2: "Moi.com"
       intro: "Web sách hàng đầu Việt Nam"
+      sign_up: "Sign Up"
+      login: "Login"
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      log_out: "Log out"
+      users: "Users"
     footer:
       flicker: "Flicker Images"
       labels: "Labels"
@@ -68,7 +75,7 @@ en:
       agree: ", you agree to the "
       terms_conditions: "Terms and Conditions"
       set_out: " set out by this site, including our Cookie Use."
-      sign_in: "Sign In"
+      log_in: "Login"
       i_agree: "I Agree"
     show:
       flash:
@@ -77,3 +84,11 @@ en:
     error_messages:
       error: "error"
       form_contains: "The form contains "
+  sessions:
+    new:
+      title: "Login"
+      welcome_login: "Welcome Back! Please Login"
+      signup: "Sign up now!"
+      new_user: "New user?"
+    create: 
+      invalid: "Invalid email/password combination"
