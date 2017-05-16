@@ -21,6 +21,7 @@
 
 en:
   title: "BookMoi"
+  welcome: "Welcome to the BookMoi.com"
   static_pages:
     home:
       title: "Home"
@@ -52,3 +53,27 @@ en:
       copyright: "Copyright 2017 "
       bookmoi: "BookMoi.Com"
       developed: "Developed by Nguyen Chinh"
+  users:
+    new:
+      sign_up: "Sign up"
+      please_sign_up: "Please Sign Up"
+      free: "It's free and always will be."
+      name: "Name"
+      birthday: "1996-02-30"
+      email: "Email Address"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      click: "By clicking "
+      create: "Create my account"
+      agree: ", you agree to the "
+      terms_conditions: "Terms and Conditions"
+      set_out: " set out by this site, including our Cookie Use."
+      sign_in: "Sign In"
+      i_agree: "I Agree"
+    show:
+      flash:
+        not_found: "User not found!"
+  shared:
+    error_messages:
+      error: "error"
+      form_contains: "The form contains "

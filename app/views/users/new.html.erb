@@ -1,0 +1,67 @@
+<% provide :title, t(".sign_up") %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <%= form_for @user do |f| %>
+        <h2><%= t ".please_sign_up" %><small><%= t ".free" %></small></h2>
+        <%= render "shared/error_messages" %>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.text_field :name, class: "form-control input-lg",
+                placeholder: t(".name") %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.date_field :birthday, class: "form-control input-lg",
+                placeholder: t(".birthday") %>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, class: "form-control input-lg",
+            placeholder: t(".email") %>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.password_field :password, class: "form-control input-lg",
+                placeholder: t(".password") %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.password_field :password_confirmation,
+                class: "form-control input-lg",
+                placeholder: t(".password_confirmation") %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-sm-3 col-md-3">
+            <span class="button-checkbox">
+              <button type="button" class="btn" data-color="info">
+                <%= t ".i_agree" %></button>
+              <input type="checkbox" name="t_and_c" id="t_and_c"
+                class="hidden" value="1">
+            </span>
+          </div>
+          <div class="col-xs-8 col-sm-9 col-md-9">
+            <%= t ".click" %><strong class="label label-primary">
+              <%= t ".create" %></strong><%= t ".agree" %>
+              <%= link_to t(".terms_conditions"), "#" %><%= t ".set_out" %>
+          </div>
+        </div>
+        <hr class="colorgraph">
+        <div class="row">
+        <div class="col-xs-12 col-md-6"><%= f.submit t(".create"),
+          class: "btn btn-primary btn-block btn-lg" %></div>
+        <div class="col-xs-12 col-md-6">
+          <%= link_to t(".sign_in"), "#",
+          class: "btn btn-success btn-block btn-lg" %></a></div>
+      </div>
+    <% end %>
+  </div>
+</div>
