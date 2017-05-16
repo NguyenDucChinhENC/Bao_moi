@@ -1,1 +1,42 @@
 <%= provide :title, t(".title") %>
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="container">
+    <a class="scrollToTop" ><i class="fa fa-angle-up"></i></a>
+    <section id="mainContent">
+      <div class="content-bottom">
+        <div class="col-lg-8 col-md-8">
+          <div class="content-bottom-left">
+            <div class="single-page-area">
+              <ol class="breadcrumb">
+                <li><%= link_to t("static_pages.home.title"), root_path %></li>
+                <li class="active"><%= t ".title" %></li>
+              </ol>
+              <h2 class="post-titile"><%= t ".about_us" %></h2>
+              <div class="single-page-content">
+                <%= image_tag "logo.png", class: "img-center" %>
+                <p></p>
+                <%= t ".introductory_content" %>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="content-bottom-right">
+            <div class="single-bottom-rightbar wow fadeInDown">
+              <h2><%= t ".popular" %></h2>
+              <ul>
+                <li><%= link_to t("static_pages.home.title"), root_path %></li>
+                <li><%= link_to t(".truyen"), "#" %></li>
+                <li><%= link_to t(".truyen"), "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

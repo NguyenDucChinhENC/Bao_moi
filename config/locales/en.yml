@@ -50,6 +50,7 @@ en:
       setting: "Settings"
       log_out: "Log out"
       users: "Users"
+      manage: "Manage Store"
     footer:
       flicker: "Flicker Images"
       labels: "Labels"
@@ -80,6 +81,12 @@ en:
     show:
       flash:
         not_found: "User not found!"
+    create:
+      welcome: "Sign up successfully. Welcome to BookMoi"
+    manage:
+      title: "Manage Store"
+      list_b: "List Books"
+      list_u: "List Users"
   shared:
     error_messages:
       error: "error"
@@ -90,5 +97,6 @@ en:
       welcome_login: "Welcome Back! Please Login"
       signup: "Sign up now!"
       new_user: "New user?"
-    create: 
-      invalid: "Invalid email/password combination"
+      remember_me: "Remember me on this computer"
+    create:
+invalid: "Invalid email/password combination"
