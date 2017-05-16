@@ -17,17 +17,23 @@
           placeholder: "Password" %>
         </div>
 
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span><%= t ".remember_me" %></span>
+        <% end %>
+
+
         <hr class="colorgraph">
         <div class="form-group"> 
           <div class="col-xs-12">
-            <%= f.submit t("title"), class: "btn btn-warning btn-block btn-lg" %>
+            <%= f.submit t(".title"), class: "btn btn-warning btn-block btn-lg" %>
           </div>
         </div>
 
       <% end %>
 
       <div class="form-group"> 
-        <p><%= t".new_user" %><%= link_to t(".signup"), new_user_path %></p>
+        <p><%= t ".new_user" %><%= link_to t(".signup"), new_user_path %></p>
       </div>        
     </div>
   </div>
