@@ -1,0 +1,14 @@
+<% provide :title, t ".title" %>
+<h1><%= t ".title" %></h1>
+
+<%= will_paginate %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.name, book %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
