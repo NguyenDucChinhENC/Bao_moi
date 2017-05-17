@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  product_price: "%{price}Đ"
   not_admin: "You cant direct that page"
   login_first: "You must login first"
   title: "BookMoi"
@@ -95,12 +96,41 @@ en:
       signup: "Sign up now!"
       new_user: "New user?"
       remember_me: "Remember me on this computer"
-    create: 
+    create:
       invalid: "Invalid email/password combination"
   admin:
-    books: 
+    books:
       index:
         title: "List Books"
-  books: 
+      new:
+        title: "Add Book"
+        name: "Name"
+        category_id: "Category"
+        publishing: "Publishing"
+        price: "Price"
+        summary: "Summary"
+        quantity: "Quantity"
+        picture: "Picture"
+        add: "Add new book"
+      create:
+        flash:
+          add_done: "The book has been added"
+        picture_size:
+          errors: "should be less than 5MB"
+  books:
     index:
       title: "List Books"
+      items_stock: " items in stock"
+    show:
+      items_stock: " items in stock"
+      choose_add: "Choose add to card to buy and choose more products"
+      dong: " Đ"
+      details: "Book Details"
+      information: "Book Information"
+      name: "Name"
+      category: "Category"
+      publishing_company: "Publishing Company"
+      qty: "Qty."
+      flash:
+        not_found: "The book does not exist"
+        number:
