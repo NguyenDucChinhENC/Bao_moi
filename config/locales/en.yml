@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  not_admin: "You cant direct that page"
+  login_first: "You must login first"
   title: "BookMoi"
   welcome: "Welcome to the BookMoi.com"
   static_pages:
@@ -95,3 +97,10 @@ en:
       remember_me: "Remember me on this computer"
     create: 
       invalid: "Invalid email/password combination"
+  admin:
+    books: 
+      index:
+        title: "List Books"
+  books: 
+    index:
+      title: "List Books"
