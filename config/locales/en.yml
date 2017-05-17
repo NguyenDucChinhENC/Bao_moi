@@ -100,3 +100,5 @@ en:
       remember_me: "Remember me on this computer"
     create:
 invalid: "Invalid email/password combination"
+    create: 
+      invalid: "Invalid email/password combination"
