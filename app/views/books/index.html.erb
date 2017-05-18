@@ -1,14 +1,32 @@
-<% provide :title, t ".title" %>
+<% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
-
-<%= will_paginate %>
-
-<ul>
-  <% @books.each do |book| %>
+<div class="container">
+  <%= will_paginate %>
+  <ul>
+    <% @books.each do |book| %>
     <li>
-      <%= link_to book.name, book %>
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="picture-list">
+            <a><%= link_to book do %>
+            <%= image_tag( book.picture.url, height: Settings.height_picture_book_index) if book.picture? %>
+              <% end %>
+            </a>
+          </div>
+        </div>
+        <div class="span7">
+          <h3><%= book.name %></h3>
+          <hr class="soft"/>
+          <div class="control-group">
+            <h2><%= book.price %><%= t ".dong" %></h2>
+            <br>
+          </div>
+          <h4><%= book.quantity %><%= t ".items_stock" %></h4>
+        </div>
+      </div>
     </li>
-  <% end %>
-</ul>
-
-<%= will_paginate %>
+    <hr class="colorgrap">
+    <% end %>
+  </ul>
+  <%= will_paginate %>
+</div>

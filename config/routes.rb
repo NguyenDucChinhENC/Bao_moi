@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create]
   resources :books, only: [:index, :show]
   namespace :admin do
-    resources :books, only: [:index]
+    resources :books, except: [:edit, :update, :destroy]
   end
 end
