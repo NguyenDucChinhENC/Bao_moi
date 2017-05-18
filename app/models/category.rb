@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :book
+  has_many :books, dependent: :destroy
 end
