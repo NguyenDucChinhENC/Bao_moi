@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   attr_accessor :remember_token
+  ratyrate_rater
 
   has_many :comment, dependent: :destroy
   has_many :orders, dependent: :destroy
-  has_many :rate, dependent: :destroy
 
   before_save :email_downcase
 
