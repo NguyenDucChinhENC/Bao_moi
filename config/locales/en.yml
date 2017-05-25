@@ -69,6 +69,7 @@ en:
       please_sign_up: "Please Sign Up"
       free: "It's free and always will be."
       name: "Name"
+      avatar: "Avatar"
       birthday: "1996-02-30"
       email: "Email Address"
       password: "Password"
@@ -89,6 +90,9 @@ en:
     error_messages:
       error: "error"
       form_contains: "The form contains "
+    comment_form:
+      feed: "What do you feel about the book?"
+      post: "Post"
   sessions:
     new:
       title: "Login"
@@ -131,6 +135,16 @@ en:
       category: "Category"
       publishing_company: "Publishing Company"
       qty: "Qty."
+      comment: " Comments"
       flash:
         not_found: "The book does not exist"
         number:
+  comments:
+    comment:
+      posted: "Posted "
+      ago: " ago."
+      you_sure: "Your sure?"
+    create:
+      cant_post: "Can't post comment"
+      post: "comment created!"
+    destroy: "Comment deleted"
