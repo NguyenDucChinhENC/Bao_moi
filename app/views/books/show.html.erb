@@ -1,50 +1,73 @@
 <% provide :title, @book.name %>
 <div class="container">
-  <div class="well well-small">
-    <div class="row-fluid">
-      <div class="span5">
-        <a><%= image_tag @book.picture.url if @book.picture? %></a>
-      </div>
-      <div class="span7">
-        <h3><%= @book.name %></h3>
-        <hr class="soft"/>
-        <form class="form-horizontal qtyFrm">
-          <div class="control-group">
-           <h2><%= number_to_currency(@book.price) %></h2>
-           <br>
-           <label class="control-label"><span><%= :quantity %></span></label>
-           <div class="controls">
+<div class="well well-small">
+  <div class="row-fluid">
+    <div class="span5">
+      <a><%= image_tag @book.picture.url if @book.picture? %></a>
+    </div>
+    <div class="span7">
+      <h3><%= @book.name %></h3>
+      <hr class="soft"/>
+      <form class="form-horizontal qtyFrm">
+        <div class="control-group">
+          <h2><%= number_to_currency(@book.price) %></h2>
+          <br>
+          <label class="control-label"><span><%= :quantity %></span></label>
+          <div class="controls">
             <input type="number" class="span6">
           </div>
         </div>
         <h4><%= @book.quantity %><%= t ".items_stock" %></h4>
         <p><%= t ".choose_add" %></p>
-        <div class="col-xs-12 col-md-6"><%= link_to "Add to cart", "#",
-          class: "btn btn-primary btn-block btn-lg" %></a></div>
-        </form>
-      </div>
-    </div>
-    <hr class="softn clr"/>
-    <ul id="productDetail" class="nav nav-tabs">
-      <li class="active"><a href="#home" data-toggle="tab"><%= t ".details" %></a></li>
-    </ul>
-    <div id="myTabContent" class="tab-content tabWrapper">
-      <div class="tab-pane fade active in" id="home">
-        <h4><%= t ".information" %></h4>
-        <table class="table table-striped">
-          <tbody>
-            <tr class="techSpecRow"><td class="techSpecTD1">
-              <%= t ".name" %></td>
-              <td class="techSpecTD2"><%= @book.name %></td></tr>
-              <tr class="techSpecRow"><td class="techSpecTD1">
-                <%= t ".price" %></td>
-                <td class="techSpecTD2"><%= number_to_currency(@book.price) %></td></tr>
-              </tbody>
-            </table>
-            <p><%= @book.summary %></p>
-          </div>
+        <div class="col-xs-12 col-md-6">
+          <%= link_to t("add_to_cart"), "#",
+          class: "btn btn-primary btn-block btn-lg" %>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</html>
+  <hr class="softn clr"/>
+  <ul id="product-detail" class="nav nav-tabs">
+    <li class="active"><a href="#home" data-toggle="tab"><%= t ".details" %></a></li>
+  </ul>
+  <div id="my-tab-content" class="tab-content tabWrapper">
+    <div class="tab-pane fade active in" id="home">
+      <h4><%= t ".information" %></h4>
+      <table class="table table-striped">
+        <tbody>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".name" %></td>
+            <td class="techSpecTD2"><%= @book.name %></td>
+          </tr>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".price" %></td>
+            <td class="techSpecTD2"><%= number_to_currency(@book.price) %></td>
+          </tr>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".summary" %></td>
+            <td class="techSpecTD2"><%= @book.summary %></td>
+          </tr>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".total_rate" %></td>
+            <td class="techSpecTD2"><%= @book.rates("rating").count %></td>
+          </tr>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".rating" %></td>
+            <td class="techSpecTD2">
+              <% if @book.rates("rating").any? %>
+                <%= @book.average("rating").avg %>/5.0
+              <% else %>
+                0.0/5.0
+              <% end %>
+            </td>
+          </tr>
+          <tr class="techSpecRow">
+            <td class="techSpecTD1"><%= t ".rate" %></td>
+            <td class="techSpecTD2"><%= rating_for @book, "rating", disable_after_rate: false, 
+              half_show: true %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
