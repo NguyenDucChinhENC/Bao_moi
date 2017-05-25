@@ -89,6 +89,9 @@ en:
     error_messages:
       error: "error"
       form_contains: "The form contains "
+    comment_form:
+      comment: "What do you think of this book?"
+      post: "Post"
   sessions:
     new:
       title: "Login"
@@ -138,3 +141,16 @@ en:
       rating: "Rating"
       rate: "Rate"
       add_to_cart: "Add to cart"
+      post: "Posted "
+      this_post: " comments for this book"
+  comments:
+    create:
+      create: "Comment created"
+      not_create: "Comment not created"
+    destroy:
+      delete: "Comment deleted"
+    comment:
+      post: "Posted "
+      ago: " ago."
+      delete: "delete"
+      sure: "You sure?"

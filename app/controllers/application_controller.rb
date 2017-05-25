@@ -3,18 +3,19 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   private
-  
-  def check_login
-    unless logged_in?
-      flash[:danger] = t "login_first"
-      redirect_to root_path
-    end
-  end
 
   def require_admin
     unless current_user.is_admin?
       flash[:danger] = t "not_admin"
       redirect_to root_path
+    end
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".log_in"
+      redirect_to login_url
     end
   end
 end

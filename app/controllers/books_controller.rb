@@ -5,7 +5,11 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by id: params[:id]
-    unless @book
+    @comment = current_user.comment.build if logged_in?
+    if @book
+      @comments = @book.comments.newest.paginate page: params[:page]
+
+    else
       flash[:danger] = t ".flash.not_found"
       redirect_to root_path
     end
