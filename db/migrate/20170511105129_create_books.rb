@@ -4,7 +4,6 @@ class CreateBooks < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :category_id
       t.integer :publishing_company_id
-      t.float :rate
       t.float :price
       t.text :summary
       t.integer :quantity
