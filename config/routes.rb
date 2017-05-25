@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "/rate", to: "rater#create", as: "rate"
   resources :users, only: [:show, :new, :create]
   resources :books, only: [:index, :show]
+  resources :comments, only: [:new, :create, :destroy]
   namespace :admin do
     resources :books, except: [:edit, :update, :destroy]
   end

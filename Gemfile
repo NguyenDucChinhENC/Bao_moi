@@ -25,6 +25,7 @@ gem "mini_magick", "4.5.1"
 gem "fog", "1.38.0"
 gem "config"
 gem "ratyrate"
+gem "cancancan", "~> 1.10"
 
 group :development, :test do
   gem "sqlite3"
