@@ -134,3 +134,7 @@ en:
       flash:
         not_found: "The book does not exist"
         number:
+      total_rate: "Total rate"
+      rating: "Rating"
+      rate: "Rate"
+      add_to_cart: "Add to cart"

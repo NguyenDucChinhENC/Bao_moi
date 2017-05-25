@@ -45,7 +45,8 @@ $(function(){
           score: score,
           dimension: $(this).attr('data-dimension'),
           id: $(this).attr('data-id'),
-          klass: $(this).attr('data-classname')
+          klass: $(this).attr('data-classname'),
+          authenticity_token: getMetaContent('csrf-token')
         },
         function(data) {
           if(data) {
