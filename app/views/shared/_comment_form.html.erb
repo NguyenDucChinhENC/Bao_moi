@@ -1,0 +1,10 @@
+<div class="widget-area no-padding blank">
+  <div class="status-upload">
+    <%= form_for @comment do |f| %>
+      <%= f.hidden_field :book_id, value: @book.id %>
+      <%= f.text_area :content, placeholder: t(".comment") %>
+      <button class="btn btn-success green">
+        <%= f.submit t(".post"), class: "btn btn-success green" %></button>
+    <% end %>
+  </div>
+</div>

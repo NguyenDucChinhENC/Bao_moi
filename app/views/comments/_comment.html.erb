@@ -1,0 +1,23 @@
+<div class="panel panel-white post panel-shadow">
+  <div class="post-footer">
+    <ul class="comments-list">
+      <li class="comment">
+        <!-- <a class="pull-left" href="#">
+          <img class="avatar" src="em se them avatar sau" alt="avatar">
+        </a> -->
+        <div class="comment-body">
+          <div class="comment-heading">
+            <h4 class="user"><%= link_to comment.user.name, comment.user %></h4>
+            <h5 class="time"><%= t ".post" %>
+              <%= time_ago_in_words(comment.created_at) %><%= t ".ago" %></h5>
+          </div>
+          <p><%= comment.content %></p>
+        </div>
+        <% if (can? :destroy, Comment) %>
+          <%= link_to t(".delete"), comment, method: :delete,
+            data: {confirm: t(".sure")} %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
