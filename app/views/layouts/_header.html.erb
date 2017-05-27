@@ -14,7 +14,7 @@
             <ul class="top-nav1">
               <li>
                 <form action="#" class="search_form">
-                  <%= text_field_tag :search, "", placeholder: t(".search_title") %>
+                  <%= text_field_tag :term, params[:term], placeholder: t(".search_title") %>
                   <input type="submit" value="">
                 </form>
               </li>

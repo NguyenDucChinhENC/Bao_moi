@@ -120,6 +120,15 @@ en:
           add_done: "The book has been added"
         picture_size:
           errors: "should be less than 5MB"
+    publishing_companies:
+      new:
+        new: "New publishing company"
+        name: "Name publishing company"
+        info: "Info of publishing company"
+        add: "Add publishing company"
+        title: "New publishing company"
+      index:
+        title: "All publishing company"
   books:
     index:
       title: "List Books"

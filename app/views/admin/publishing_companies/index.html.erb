@@ -1,0 +1,18 @@
+<% provide :title, t(".title") %>
+<div class="container">
+  <div class="row" >
+    <div class="col-md-4" >
+      <h1><%= t ".title" %></h1>
+      <%= will_paginate %>
+      <ul>
+        <% @publishing_companies.each do |publishing_company| %>
+          <li>
+            <%= publishing_company.id %>
+            <%= link_to publishing_company.name %>
+          </li>
+        <% end %>
+      </ul>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>
