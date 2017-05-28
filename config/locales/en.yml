@@ -129,6 +129,15 @@ en:
         title: "New publishing company"
       index:
         title: "All publishing company"
+    categories:
+      new:
+        title: "New category"
+        new: "New category"
+        name: "Name category"
+        parents: "Parents ID"
+        add: "Add category"
+      index:
+        title: "All category"
   books:
     index:
       title: "List Books"
