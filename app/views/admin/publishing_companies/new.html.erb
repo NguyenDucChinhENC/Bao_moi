@@ -1,0 +1,24 @@
+<% provide :title, t(".title") %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <%= form_for [:admin, @publishing_company] do |f| %>
+        <br><br><hr>
+        <h2><%= t ".new" %></h2>
+        <br>
+        <div class="form-group">
+          <%= f.text_field :name, class: "form-control input-lg",
+          placeholder: t(".name") %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :info, class: "form-control input-lg",
+          placeholder: t(".info") %>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6"><%= f.submit t(".add"),
+            class: "btn btn-warning btn-block btn-lg" %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

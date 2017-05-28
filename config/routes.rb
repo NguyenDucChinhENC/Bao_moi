@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :comments, only: [:create, :destroy]
   namespace :admin do
     resources :books, except: [:edit, :update, :destroy]
+    resources :publishing_companies, except: [:edit, :update, :destroy]
   end
 end
