@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :books, only: [:index, :show]
   resources :comments, only: [:create, :destroy]
   resources :categories, only: [:show]
+  resources :order_lines, only: [:create, :update, :destroy]
+  resource :cart, only: [:show]
+  resources :orders, only: [:update, :destroy]
   namespace :admin do
     resources :books, except: [:edit, :update, :destroy]
     resources :publishing_companies, except: [:edit, :update, :destroy]

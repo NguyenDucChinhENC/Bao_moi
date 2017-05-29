@@ -7,6 +7,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
       t.float :price
       t.text :summary
       t.integer :quantity
+      t.boolean :active, default: true
 
       t.timestamps
     end

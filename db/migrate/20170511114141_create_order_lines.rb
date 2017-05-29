@@ -5,6 +5,7 @@ class CreateOrderLines < ActiveRecord::Migration[5.0]
       t.integer :book_id
       t.float :price
       t.integer :number
+      t.float :total_price
 
       t.timestamps
     end

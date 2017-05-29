@@ -147,7 +147,6 @@ en:
       title: "List Books"
       items_stock: " items in stock"
     show:
-      items_stock: " items in stock"
       choose_add: "Choose add to card to buy and choose more products"
       dong: " Đ"
       details: "Book Details"
@@ -176,3 +175,18 @@ en:
       ago: " ago."
       delete: "delete"
       sure: "You sure?"
+    book_row:
+      items_stock: " items in stock"
+  carts:
+    show:
+      add: "Address"
+      con_to_buy: "Confirm to buy"
+  orders:
+    update:
+      buy_success: "Buying success"
+      cant_buy: "Can't buy now ....."
+  order_lines:
+    create:
+      invalid: "Not valid"
+    not_valid_book: "Is not valid or is not active"
+    not_valid_order: "Is not valid order"
