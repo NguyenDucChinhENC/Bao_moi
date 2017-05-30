@@ -80,6 +80,7 @@ en:
       set_out: " set out by this site, including our Cookie Use."
       log_in: "Login"
       i_agree: "I Agree"
+      picture: "You picture"
     show:
       flash:
         not_found: "User not found!"
@@ -129,6 +130,9 @@ en:
         title: "New publishing company"
       index:
         title: "All publishing company"
+      create:
+        flash:
+          add_done: "Add done"
     categories:
       new:
         title: "New category"

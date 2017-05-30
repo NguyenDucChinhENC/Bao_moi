@@ -8,46 +8,47 @@
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
             <%= f.text_field :name, class: "form-control input-lg",
-            placeholder: t(".name") %>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-            <%= f.number_field :category_id, class: "form-control input-lg",
-            placeholder: t(".category_id") %>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-            <%= f.number_field :publishing_company_id,
-            class: "form-control input-lg",
-              placeholder: t(".publishing") %>
+              placeholder: t(".name") %>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
             <%= f.number_field :price, class: "form-control input-lg",
-            placeholder: t(".price") %>
+              placeholder: t(".price") %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <%= f.select :publishing_company_id,
+              PublishingCompany.all.collect {|p| [ p.name, p.id ]},
+              class: "form-control input-lg" %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <%= f.select :category_id,
+              Category.all.collect {|c| [ c.name, c.id ]},
+              class: "form-control input-lg" %>
           </div>
         </div>
       </div>
       <div class="form-group">
         <%= f.text_field :summary, class: "form-control input-lg",
-        placeholder: t(".summary") %>
+          placeholder: t(".summary") %>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
             <%= f.number_field :quantity, class: "form-control input-lg",
-            placeholder: t(".quantity") %>
+              placeholder: t(".quantity") %>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
             <%= f.file_field :picture, class: "form-control input-lg",
-            placeholder: t(".picture") %>
+              placeholder: t(".picture") %>
           </div>
         </div>
       </div>

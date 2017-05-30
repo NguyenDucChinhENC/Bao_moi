@@ -13,29 +13,29 @@
         <ul class="comments-list">
           <li class="comment">
             <div class="row-fluid">
-            <div class="span5">
-              <div class="picture-list">
-                <a>
-                  <% if book.picture? %>
+              <div class="span5">
+                <div class="picture-list">
+                  <a>
                     <center>
                       <br>
-                      <%= image_tag(book.picture.url,
-                        height: Settings.height_picture_book_index) %>
+                      <% if book.picture? %>
+                        <%= image_tag(book.picture.url,
+                          height: Settings.height_picture_book_index) %>
+                      <% end %>
                     </center>
-                  <% end %>
-                </a>
+                  </a>
+                </div>
+              </div>
+              <div class="span7">
+                <h3><%= link_to book.name, book %></h3>
+                <hr class="soft"/>
+                <div class="control-group">
+                  <h2><%= number_to_currency book.price %></h2>
+                  <br>
+                </div>
+                <h4><%= book.quantity %><%= t ".items_stock" %></h4>
               </div>
             </div>
-            <div class="span7">
-              <h3><%= link_to book.name, book %></h3>
-              <hr class="soft"/>
-              <div class="control-group">
-                <h2><%= number_to_currency book.price %></h2>
-                <br>
-              </div>
-              <h4><%= book.quantity %><%= t ".items_stock" %></h4>
-            </div>
-          </div>
           </li>
         </ul>
       </div>

@@ -1,13 +1,18 @@
 <% provide :title, @user.name %>
 <div class="container">
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <h1>
-          <%= gravatar_for @user %>
-          <%= @user.name %>
-        </h1>
-      </section>
-    </aside>
+  <div class="span3 well">
+    <center>
+      <br>
+      <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+        <% if @user.picture? %>
+          <%= image_tag( @user.picture.url,
+            height: Settings.height_picture_book_index, class: "img-circle") %>
+        <% end %>
+      </a>
+      <br><hr><br>
+      <h2><%= @user.name %></h2>
+      <em><%= @user.email %></em>
+      <br>
+    </center>
   </div>
 </div>
