@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  include ApplicationHelper
+  helper_method :current_order
+  include ApplicationHelper  
 
   private
 
@@ -15,6 +16,16 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       flash[:danger] = t ".log_in"
       redirect_to login_url
+    end
+  end
+
+  def current_order
+    if logged_in?
+      if session[:order_id]
+        Order.find(session[:order_id])
+      else
+        current_user.orders.new
+      end
     end
   end
 end

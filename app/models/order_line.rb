@@ -25,13 +25,13 @@ class OrderLine < ApplicationRecord
 
   def book_present
     if book.nil?
-      errors.add(:book, t "order_lines.not_valid_book")
+      errors.add :book, I18n.t("order_lines.not_valid_book")
     end
   end
 
   def order_present
     if order.nil?
-      errors.add(:order, t "order_lines.not_valid_order")
+      errors.add :order, I18n.t("order_lines.not_valid_order")
     end
   end
 

@@ -180,7 +180,12 @@ en:
   carts:
     show:
       add: "Address"
+    shopping_cart:
+      title: "Cart"
+      add_address: "Please fill the your address"
       con_to_buy: "Confirm to buy"
+      notice: "There are no items in your shopping cart.  Please"
+      notice2: "and add some items to your cart."
   orders:
     update:
       buy_success: "Buying success"
