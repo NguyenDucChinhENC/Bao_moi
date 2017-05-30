@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529153315) do
+ActiveRecord::Schema.define(version: 20170525123251) do
 
   create_table "author_books", force: :cascade do |t|
     t.integer  "author_id"
@@ -45,8 +45,9 @@ ActiveRecord::Schema.define(version: 20170529153315) do
     t.float    "price"
     t.text     "summary"
     t.integer  "quantity"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.boolean  "active",                default: true
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "picture"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["publishing_company_id"], name: "index_books_on_publishing_company_id"
@@ -75,18 +76,29 @@ ActiveRecord::Schema.define(version: 20170529153315) do
     t.integer  "book_id"
     t.float    "price"
     t.integer  "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.float    "total_price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["book_id"], name: "index_order_lines_on_book_id"
     t.index ["order_id"], name: "index_order_lines_on_order_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "address"
-    t.float    "total_price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.float    "total"
+    t.float    "tax"
+    t.float    "subtotal"
+    t.integer  "order_status_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

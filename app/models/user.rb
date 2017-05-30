@@ -22,6 +22,7 @@ class User < ApplicationRecord
         BCrypt::Engine.cost
       BCrypt::Password.create string, cost: cost
     end
+
     def new_token
       SecureRandom.urlsafe_base64
     end
@@ -33,6 +34,7 @@ class User < ApplicationRecord
   end
 
   def authenticated? remember_token
+    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?remember_token
   end
 
