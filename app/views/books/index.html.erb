@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
-<h1><%= t ".title" %></h1>
 <div class="container">
+  <h1><center><%= link_to t(".title"), books_path %></center></h1>
   <%= will_paginate %>
   <ul>
     <% @books.each do |book| %>
@@ -15,13 +15,7 @@
           </div>
         </div>
         <div class="span7">
-          <h3><%= book.name %></h3>
-          <hr class="soft"/>
-          <div class="control-group">
-            <h2><%= book.price %><%= t ".dong" %></h2>
-            <br>
-          </div>
-          <h4><%= book.quantity %><%= t ".items_stock" %></h4>
+          <%= render "book_row", book: book, order_line: @order_line %>
         </div>
       </div>
     </li>

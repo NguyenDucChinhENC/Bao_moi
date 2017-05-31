@@ -63,6 +63,8 @@ en:
       copyright: "Copyright 2017 "
       bookmoi: "BookMoi.Com"
       developed: "Developed by Nguyen Chinh"
+    cart_text:
+      item_in_cart: "%{size} item in cart ( %{money} )"
   users:
     new:
       sign_up: "Sign up"
@@ -164,6 +166,8 @@ en:
       add_to_cart: "Add to cart"
       post: "Posted "
       this_post: " comments for this book"
+    book_row:
+      unit_price: "Unit price"
   comments:
     create:
       create: "Comment created"
@@ -186,6 +190,11 @@ en:
       con_to_buy: "Confirm to buy"
       notice: "There are no items in your shopping cart.  Please"
       notice2: "and add some items to your cart."
+    cart_row:
+      total_price: "Total price"
+      confirm: "Are you sure to delete the book %{name} from your cart?"
+      update_quantity: "Update quantity"
+      delete: "Delete"
   orders:
     update:
       buy_success: "Buying success"
