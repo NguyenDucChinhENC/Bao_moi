@@ -28,20 +28,19 @@ en:
   static_pages:
     home:
       title: "Home"
+      most_interested: "Most interested"
     about:
       title: "About"
     help:
       title: "Help"
   layouts:
     header:
-      home_title: "Home"
       about_title: "About"
       contact_title: "Contact"
       error_page_title: "error page"
       search_title: "Text to search"
-      archives: "Archives"
-      archives1: "Archives 1"
-      single_page: "Single page"
+      categories: "Categories"
+      publishing_companies: "Publishing Companies"
       error_title: "404 page"
       name_title_1: "book"
       name_title_2: "Moi.com"
@@ -53,16 +52,23 @@ en:
       setting: "Settings"
       log_out: "Log out"
       users: "Users"
+      books: "Books"
+      home_title: "Home"
+      archives: "Archives"
+      archives1: "Archives 1"
+      single_page: "Single page"
     footer:
-      flicker: "Flicker Images"
-      labels: "Labels"
+      new_books: "New Books"
+      categories: "Categories"
       about_us: "About us"
-      about_text: "Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Sed nec laoreet orci, eget ullamcorper quam. Phasellus lorem neque, "
+      about_text: "Trang web bán sách online hàng đầu Việt Nam, thông tin liên hệ
+      bookmoi@gmail.com. Thanks you"
       label: "Label"
       copyright: "Copyright 2017 "
       bookmoi: "BookMoi.Com"
       developed: "Developed by Nguyen Chinh"
+      flicker: "Flicker Images"
+      labels: "Labels"
     cart_text:
       item_in_cart: "%{size} item in cart ( %{money} )"
   users:

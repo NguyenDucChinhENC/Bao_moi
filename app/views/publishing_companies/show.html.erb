@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="span3 well">
+    <center>
+      <h1><%= @publishing_company.name %></h2>
+      <h3><%= t ".id" %><%= @publishing_company.id %></h3>
+    </center>
+  </div>
+  <%= will_paginate @books %>
+  <ul>
+    <% @books.each do |book| %>
+    <div class="panel panel-white post panel-shadow">
+      <div class="post-footer">
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="row-fluid">
+              <div class="span5">
+                <div class="picture-list">
+                  <a>
+                    <center>
+                      <br>
+                      <% if book.picture? %>
+                        <%= image_tag(book.picture.url,
+                          height: Settings.height_picture_book_index) %>
+                      <% end %>
+                    </center>
+                  </a>
+                </div>
+              </div>
+              <div class="span7">
+                <h3><%= link_to book.name, book %></h3>
+                <hr class="soft"/>
+                <div class="control-group">
+                  <h2><%= number_to_currency book.price %></h2>
+                  <br>
+                </div>
+                <h4><%= book.quantity %><%= t ".items_stock" %></h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="colorgrap">
+    <% end %>
+  </ul>
+  <%= will_paginate @books %>
+</div>

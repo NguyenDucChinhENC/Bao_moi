@@ -1,18 +1,19 @@
 <% provide :title, t(".title") %>
 <div class="container">
-  <h1><center><%= link_to t(".title"), books_path %></center></h1>
+<center>
+  <h1><%= link_to t(".title"), books_path %></h1>
   <%= will_paginate %>
   <ul>
     <% @books.each do |book| %>
     <li>
       <div class="row-fluid">
         <div class="span5">
-          <div class="picture-list">
+          <!-- <div class="picture-list">
             <a><%= link_to book do %>
             <%= image_tag( book.picture.url, height: Settings.height_picture_book_index) if book.picture? %>
               <% end %>
             </a>
-          </div>
+          </div> -->
         </div>
         <div class="span7">
           <%= render "book_row", book: book, order_line: @order_line %>
@@ -23,4 +24,5 @@
     <% end %>
   </ul>
   <%= will_paginate %>
+</center>
 </div>

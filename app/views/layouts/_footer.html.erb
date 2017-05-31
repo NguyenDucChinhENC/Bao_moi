@@ -5,21 +5,23 @@
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="single-footer-top wow fadeInLeft">
-              <h2><%= t ".flicker" %></h2>
+              <h2><%= t ".new_books" %></h2>
               <ul class="flicker-nav">
-                <% (1..4).each do |a| %>
-                  <li><%= link_to image_tag "75x75.jpg" %>
-                    </a></li>
+                <% Book.order(created_at: :desc).limit(4).each do |book| %>
+                  <li><%= link_to book do %>
+                    <%= image_tag( book.picture,
+                      height: 80) if book.picture? %>
+                  <% end %>
                 <%end %>
               </ul>
             </div>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="single-footer-top wow fadeInDown">
-              <h2><%= t ".labels" %></h2>
+              <h2><%= t ".categories" %></h2>
               <ul class="labels-nav">
-                <% (1..8).each do |a| %>
-                  <li><%= link_to t(".label"), "#" %></li>
+                <% Category.limit(8).each do |category| %>
+                  <li><%= link_to category.name.first(20), category %></li>
                 <%end %>
               </ul>
             </div>

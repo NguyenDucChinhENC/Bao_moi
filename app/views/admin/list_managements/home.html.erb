@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="span3 well">
+    <center>
+      <h1><%= t ".manager" %></h2>
+    </center>
+  </div>
+  <ul>
+    <div class="panel panel-white post panel-shadow">
+      <div class="post-footer">
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="row-fluid">
+              <div class="span7">
+                <h3><%= link_to t(".new_book"), new_admin_book_path %></h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="colorgrap">
+  </ul>
+  <ul>
+    <div class="panel panel-white post panel-shadow">
+      <div class="post-footer">
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="row-fluid">
+              <div class="span7">
+                <h3><%= link_to t(".list_publishing_companies"),
+                   admin_publishing_companies_path %></h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="colorgrap">
+  </ul>
+  <ul>
+    <div class="panel panel-white post panel-shadow">
+      <div class="post-footer">
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="row-fluid">
+              <div class="span7">
+                <h3><%= link_to t(".new_category"), new_admin_category_path %></h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="colorgrap">
+  </ul>
+  <ul>
+    <div class="panel panel-white post panel-shadow">
+      <div class="post-footer">
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="row-fluid">
+              <div class="span7">
+                <h3><%= link_to t(".list_categories"), admin_categories_path %></h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="colorgrap">
+  </ul>
+</div>

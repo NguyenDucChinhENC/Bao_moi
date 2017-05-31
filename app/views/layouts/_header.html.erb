@@ -19,7 +19,7 @@
                 </form>
               </li>
               <% if logged_in? %>
-                <li><%= link_to t(".users"), "#" %></li>
+                <li><%= link_to t(".users"), current_user %></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <%= t".account" %> <b class="caret"></b>
@@ -44,9 +44,7 @@
         <div class="header-bottom">
           <div class="header-bottom-left"><a class="logo">
             <%= t ".name_title_1" %><strong><%= t ".name_title_2" %>
-            </strong> <span><%= t ".intro" %></span></a></div>
-          <%= link_to image_tag "addbanner_728x90_V1.jpg",
-            class: "header-bottom-right" %>
+            </strong><span><%= t ".intro" %></span></a></div>
         </div>
       </div>
     </div>
@@ -66,15 +64,22 @@
           <ul class="nav navbar-nav custom-nav">
             <li class=""><%= link_to t(".home_title"), root_path %></li>
             <li class="dropdown"> <a class="" data-toggle="dropdown"
-              role="button" aria-expanded="false"><%= t ".archives"  %></a>
+              role="button" aria-expanded="false"><%= t ".categories"  %></a>
               <ul class="dropdown-menu" role="menu">
-                <% (1..4).each do |a| %>
-                  <li><%= link_to t(".archives"), "#" %></li>
+                <% Category.all.each do |c| %>
+                  <li><%= link_to c.name, c %></li>
                 <%end %>
               </ul>
             </li>
-            <li><%= link_to t(".single_page"), "#" %></li>
-            <li><%= link_to t(".contact_title"), "#" %></li>
+            <li class="dropdown"> <a class="" data-toggle="dropdown"
+              role="button" aria-expanded="false"><%= t ".publishing_companies"  %></a>
+              <ul class="dropdown-menu" role="menu">
+                <% PublishingCompany.all.each do |p| %>
+                  <li><%= link_to p.name, p %></li>
+                <%end %>
+              </ul>
+            </li>
+            <li><%= link_to t(".books"), Book %></li>
             <li><%= link_to t(".error_title"), "#" %></li>
           </ul>
         </div>
